@@ -334,7 +334,7 @@ body {
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 11px;
     display: none;
   }
 
