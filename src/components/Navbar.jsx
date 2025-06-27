@@ -134,15 +134,7 @@ function Navbar() {
               Trips
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/Contact"
-              className={({ isActive }) => (isActive ? 'active' : '')}
-              style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
-            >
-              Contact
-            </NavLink>
-          </li>
+          
         </ul>
       </div>
 
@@ -210,15 +202,7 @@ function Navbar() {
               Trips
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/Contact"
-              onClick={() => setIsMenuOpen(false)}
-              style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
-            >
-              Contact
-            </NavLink>
-          </li>
+          
         </ul>
       )}
 

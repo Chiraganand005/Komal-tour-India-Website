@@ -203,7 +203,7 @@ function Tours() {
                   <li key={index}>• {highlight}</li>
                 ))}
               </ul>
-              <a
+              {/* <a
                 href={`/book/${tour.id}`}
                 style={{
                   ...styles.bookBtn,
@@ -211,7 +211,20 @@ function Tours() {
                 }}
               >
                 Book Now
-              </a>
+              </a> */}
+              <button
+  onClick={() => handleBookNow(tour.id)}
+  style={{
+    ...styles.bookBtn,
+    ...(hoveredCard === tour.id ? styles.bookHover : {}),
+    cursor: 'pointer', // button pe pointer cursor
+    border: 'none',
+    outline: 'none',
+  }}
+>
+  Book Now
+</button>
+
             </div>
           ))}
         </div>
