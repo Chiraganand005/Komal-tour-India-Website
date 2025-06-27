@@ -33,9 +33,9 @@ function Navbar() {
             src="src/images/komalorg.jpg"
             alt="Komal Tour India Logo"
             style={{
-              height: '60px',
-              width: '60px',
-              borderRadius: '60%',
+              height: '65px',
+              width: '85px',
+              borderRadius: '65%',
               objectFit: 'cover',
               border: '2px solid #333',
               marginRight: '10px',
@@ -100,7 +100,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="/About"
               className={({ isActive }) => (isActive ? 'active' : '')}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -109,7 +109,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/services"
+              to="/Services"
               className={({ isActive }) => (isActive ? 'active' : '')}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -118,7 +118,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/tours"
+              to="/Tours"
               className={({ isActive }) => (isActive ? 'active' : '')}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -127,7 +127,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/trips"
+              to="/Trips"
               className={({ isActive }) => (isActive ? 'active' : '')}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -136,7 +136,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/contact"
+              to="/Contact"
               className={({ isActive }) => (isActive ? 'active' : '')}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -176,7 +176,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="/AboutUs"
               onClick={() => setIsMenuOpen(false)}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -185,7 +185,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/services"
+              to="/Services"
               onClick={() => setIsMenuOpen(false)}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -194,7 +194,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/tours"
+              to="/Tours"
               onClick={() => setIsMenuOpen(false)}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -203,7 +203,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/trips"
+              to="/Trips"
               onClick={() => setIsMenuOpen(false)}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >
@@ -212,7 +212,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/contact"
+              to="/Contact"
               onClick={() => setIsMenuOpen(false)}
               style={{ textDecoration: 'none', color: 'white', fontWeight: '500' }}
             >

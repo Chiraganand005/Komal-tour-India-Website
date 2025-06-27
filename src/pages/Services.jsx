@@ -22,13 +22,7 @@ function Services() {
   return (
     <div className="services-wrapper">
       
-      {/* <section className="services-hero">
-        <div className="overlay">
-          <h2>Our Premium Travel Services</h2>
-          <p>Comfort, Safety & Convenience – Your Journey, Our Priority!</p>
-          
-        </div>
-      </section> */}
+      
       <section className="services-hero">
   <div className="overlay">
     <div className="hero-text">

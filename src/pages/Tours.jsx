@@ -1,120 +1,214 @@
+import React, { useState } from 'react';
+
 function Tours() {
-  const tourData = [
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const featuredTours = [
     {
       id: 1,
-      title: "Rajasthan Adventure",
-      description: "Explore the royal palaces and deserts of Rajasthan.",
-      image: "/assets/images/rajasthan-adventure.jpg",
+      title: "Golden Triangle Tour (Delhi – Agra – Jaipur)",
+      images: [
+        "Red_fort.webp",
+        "src/images/Cover-TajMahal.webp",
+        "pink_city.webp",
+      ],
+      highlights: [
+        "Dive into Delhi’s culture and cuisine",
+        "Visit the majestic Taj Mahal",
+        "Explore Jaipur's royal palaces",
+        
+      ],
     },
     {
       id: 2,
-      title: "Goa Beaches",
-      description: "Relax on the sunny beaches of Goa.",
-      image: "/assets/images/goa-beaches.jpg",
+      title: "Himalayan Bike Adventure (Kalka – Shimla – Lahaul Spiti – Dharamshala)",
+      images: [
+        "shimla.webp",
+        "Real_shimla.webp",
+        "dharamshala.webp",
+      ],
+      highlights: [
+        "Ride scenic mountain highways",
+        "Camp under the stars",
+        "Experience Tibetan monasteries & local culture",
+      ],
     },
     {
       id: 3,
-      title: "Himalayan Trek",
-      description: "Embark on an adventure in the Himalayas.",
-      image: "/assets/images/himalayan-trek.jpg",
+      title: "Char Dham Yatra",
+      images: [
+        "Yamunotri.webp",
+        "Gangotri.webp",
+        "char-dham.webp",
+      ],
+      highlights: [
+        "Seek blessings at 4 sacred temples",
+        "Enjoy breathtaking Himalayan views",
+        "Spiritual rejuvenation in Rishikesh",
+      ],
+    },
+    {
+      id: 4,
+      title: "Agra to Jaipur & Rajasthan Tour (Agra – Jaipur)",
+      images: [
+        "Golden_tri.webp",
+        "Jaipur.webp",
+        "Rajasthan.webp",
+      ],
+      highlights: [
+        "Witness sunrise at the Taj Mahal",
+        "Visit Pink City's forts & palaces",
+        "Desert charm of Pushkar & Jaisalmer",
+      ],
     },
   ];
 
-  const toursPageStyle = {
-    padding: '60px 0',
-    backgroundColor: '#f0f4f8',
+  const styles = {
+    sectionHero: {
+      backgroundImage: "url('Tour_TajMahal.png')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      height: '550px',
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: '15px',
+    },
+    overlay: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    heroText: {
+      textAlign: 'center',
+      color: '#fff',
+    },
+    heading: {
+      fontSize: '2.5rem',
+      marginBottom: '10px',
+      color: 'white',
+    },
+    subheading: {
+      fontSize: '1.4rem',
+      margin: '0',
+      color: 'white',
+    },
+    tourContainer: {
+      padding: '60px 20px',
+      backgroundColor: '#f0f4f8',
+      maxWidth: '1200px',
+      margin: '0 auto',
+    },
+    tourGrid: {
+      display: 'grid',
+      gridTemplateColumns: '1fr', // One card per row
+      gap: '30px',
+    },
+    tourCard: {
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '10px',
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+      transition: 'all 0.3s ease',
+      textAlign: 'center',
+    },
+    tourHover: {
+      transform: 'translateY(-5px)',
+      boxShadow: '0 6px 15px rgba(0,0,0,0.15)',
+    },
+    imageGrid: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1fr', // Three images side by side
+      gap: '10px',
+      marginBottom: '1rem',
+    },
+    tourImage: {
+      width: '100%',
+      height: '150px',
+      objectFit: 'cover',
+      borderRadius: '8px',
+    },
+    tourTitle: {
+      fontSize: '1.8rem',
+      color: '#1e3a8a',
+      margin: '1rem 0 0.5rem',
+      fontWeight: '600',
+    },
+    highlightList: {
+      paddingLeft: '20px',
+      color: '#333',
+      fontSize: '1rem',
+      textAlign: 'left',
+      marginBottom: '1rem',
+    },
+    bookBtn: {
+      display: 'inline-block',
+      padding: '10px 20px',
+      backgroundColor: '#3b82f6',
+      color: 'white',
+      textDecoration: 'none',
+      borderRadius: '25px',
+      fontWeight: 'bold',
+      transition: 'background-color 0.3s, transform 0.2s',
+    },
+    bookHover: {
+      backgroundColor: '#1e40af',
+      transform: 'translateY(-2px)',
+    },
   };
 
-  const containerStyle = {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 20px',
-  };
-
-  const headingStyle = {
-    fontSize: '2.5rem',
-    color: '#1e3a8a',
-    marginBottom: '2rem',
-    fontWeight: '600',
-    textAlign: 'center',
-  };
-
-  const tourGridStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: '20px',
-    justifyContent: 'center',
-  };
-
-  const tourCardStyle = {
-    background: '#ffffff',
-    padding: '20px',
-    borderRadius: '10px',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-    transition: 'all 0.3s ease',
-    textAlign: 'center',
-  };
-
-  const tourCardHoverStyle = {
-    transform: 'translateY(-5px)',
-    boxShadow: '0 6px 15px rgba(0, 0, 0, 0.15)',
-  };
-
-  const tourImageStyle = {
-    width: '100%',
-    height: '200px',
-    objectFit: 'cover',
-    borderRadius: '10px 10px 0 0',
-  };
-
-  const tourTitleStyle = {
-    fontSize: '1.5rem',
-    color: '#2b2b2b',
-    margin: '1rem 0 0.5rem',
-  };
-
-  const tourDescriptionStyle = {
-    fontSize: '1.1rem',
-    color: '#555',
-    marginBottom: '1rem',
-  };
-
-  const bookBtnStyle = {
-    display: 'inline-block',
-    padding: '10px 20px',
-    backgroundColor: '#3b82f6',
-    color: 'white',
-    textDecoration: 'none',
-    borderRadius: '25px',
-    fontWeight: 'bold',
-    transition: 'background-color 0.3s, transform 0.2s',
-  };
-
-  const bookBtnHoverStyle = {
-    backgroundColor: '#1e40af',
-    transform: 'translateY(-2px)',
+  // Function to open WhatsApp
+  const handleBookNow = (tourId) => {
+    const phoneNumber = "9899817968";
+    const tour = featuredTours.find(t => t.id === tourId);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20book%20the%20${encodeURIComponent(tour.title)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <div style={toursPageStyle}>
-      <div style={containerStyle}>
-        <h2 style={headingStyle}>Explore Our Tours</h2>
-        <div style={tourGridStyle}>
-          {tourData.map((tour) => (
+    <>
+      <section style={styles.sectionHero}>
+        <div style={styles.overlay}>
+          <div style={styles.heroText}>
+            <h2 style={styles.heading}>Discover India's Most Popular Trips</h2>
+            <p style={styles.subheading}>Curated Experiences for Unforgettable Journeys</p>
+          </div>
+        </div>
+      </section>
+
+      <div style={styles.tourContainer}>
+        <div style={styles.tourGrid}>
+          {featuredTours.map((tour) => (
             <div
               key={tour.id}
-              style={tourCardStyle}
-              onMouseEnter={(e) => Object.assign(e.target.style, tourCardHoverStyle)}
-              onMouseLeave={(e) => Object.assign(e.target.style, tourCardStyle)}
+              style={{
+                ...styles.tourCard,
+                ...(hoveredCard === tour.id ? styles.tourHover : {}),
+              }}
+              onMouseEnter={() => setHoveredCard(tour.id)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
-              <img src={tour.image} alt={tour.title} style={tourImageStyle} />
-              <h3 style={tourTitleStyle}>{tour.title}</h3>
-              <p style={tourDescriptionStyle}>{tour.description}</p>
+              <div style={styles.imageGrid}>
+                {tour.images.map((image, index) => (
+                  <img key={index} src={image} alt={`${tour.title} - Place ${index + 1}`} style={styles.tourImage} />
+                ))}
+              </div>
+              <h3 style={styles.tourTitle}>{tour.title}</h3>
+              <ul style={styles.highlightList}>
+                {tour.highlights.map((highlight, index) => (
+                  <li key={index}>• {highlight}</li>
+                ))}
+              </ul>
               <a
                 href={`/book/${tour.id}`}
-                style={bookBtnStyle}
-                onMouseEnter={(e) => Object.assign(e.target.style, bookBtnHoverStyle)}
-                onMouseLeave={(e) => Object.assign(e.target.style, bookBtnStyle)}
+                style={{
+                  ...styles.bookBtn,
+                  ...(hoveredCard === tour.id ? styles.bookHover : {}),
+                }}
               >
                 Book Now
               </a>
@@ -122,7 +216,7 @@ function Tours() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
