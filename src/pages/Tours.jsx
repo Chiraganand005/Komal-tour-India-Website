@@ -5,7 +5,7 @@ function Tours() {
 
   const featuredTours = [
     {
-      id: 1,
+      id: "Golden-triangle",
       title: "Golden Triangle Tour (Delhi – Agra – Jaipur)",
       images: [
         "src/images/Red_fort.webp",
@@ -20,7 +20,7 @@ function Tours() {
       ],
     },
     {
-      id: 2,
+      id: "Himalayan-trek",
       title: "Himalayan Bike Adventure (Kalka – Shimla – Lahaul Spiti – Dharamshala)",
       images: [
         "src/images/shimla.webp",
@@ -34,7 +34,7 @@ function Tours() {
       ],
     },
     {
-      id: 3,
+      id: "Char_dham",
       title: "Char Dham Yatra",
       images: [
         "src/images/Yamunotri.webp",
@@ -48,7 +48,7 @@ function Tours() {
       ],
     },
     {
-      id: 4,
+      id: "Agra_jaipur",
       title: "Agra to Jaipur & Rajasthan Tour (Agra – Jaipur)",
       images: [
         "src/images/Golden_tri.webp",
