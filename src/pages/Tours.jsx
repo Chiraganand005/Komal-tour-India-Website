@@ -8,9 +8,9 @@ function Tours() {
       id: 1,
       title: "Golden Triangle Tour (Delhi – Agra – Jaipur)",
       images: [
-        "Red_fort.webp",
+        "src/images/Red_fort.webp",
         "src/images/Cover-TajMahal.webp",
-        "pink_city.webp",
+        "src/images/pink_city.webp",
       ],
       highlights: [
         "Dive into Delhi’s culture and cuisine",
@@ -23,9 +23,9 @@ function Tours() {
       id: 2,
       title: "Himalayan Bike Adventure (Kalka – Shimla – Lahaul Spiti – Dharamshala)",
       images: [
-        "shimla.webp",
-        "Real_shimla.webp",
-        "dharamshala.webp",
+        "src/images/shimla.webp",
+        "src/images/Real_shimla.webp",
+        "src/images/dharamshala.webp",
       ],
       highlights: [
         "Ride scenic mountain highways",
@@ -37,9 +37,9 @@ function Tours() {
       id: 3,
       title: "Char Dham Yatra",
       images: [
-        "Yamunotri.webp",
-        "Gangotri.webp",
-        "char-dham.webp",
+        "src/images/Yamunotri.webp",
+        "src/images/Gangotri.webp",
+        "src/images/char-dham.webp",
       ],
       highlights: [
         "Seek blessings at 4 sacred temples",
@@ -51,9 +51,9 @@ function Tours() {
       id: 4,
       title: "Agra to Jaipur & Rajasthan Tour (Agra – Jaipur)",
       images: [
-        "Golden_tri.webp",
-        "Jaipur.webp",
-        "Rajasthan.webp",
+        "src/images/Golden_tri.webp",
+        "src/images/Jaipur.webp",
+        "src/images/Rajasthan.webp",
       ],
       highlights: [
         "Witness sunrise at the Taj Mahal",
@@ -65,7 +65,7 @@ function Tours() {
 
   const styles = {
     sectionHero: {
-      backgroundImage: "url('Tour_TajMahal.png')",
+      backgroundImage: "url('src/images/Tour_TajMahal.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       height: '550px',
