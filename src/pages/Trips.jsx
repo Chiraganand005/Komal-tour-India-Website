@@ -6,24 +6,24 @@ function Trips() {
   const trips = [
     {
       title: "Golden Triangle Tour",
-      image: "South_india_temple.webp",
+      image: "src/images/South_india_temple.webp",
       description: "Explore Delhi, Agra, and Jaipur with our classic Golden Triangle itinerary. Experience India's rich heritage with comfortable stays and guided tours.",
     },
     {
       title: "Rajasthan Heritage Tour",
-      image: "raj_heritage.webp",
+      image: "src/images/raj_heritage.webp",
       description: "Discover the royal charm of Rajasthan's forts, palaces, and vibrant markets. Perfect for culture enthusiasts and history buffs.",
     },
     {
       title: "South India Temple Tour",
-      image: "trips_img.png",
+      image: "src/images/trips_img.png",
       description: "Marvel at Dravidian architecture, ancient temples, and rich cultural traditions. A spiritual and cultural journey through southern India.",
     },
   ];
 
   const styles = {
     hero: {
-      backgroundImage: 'url("Trips_img.png")',
+      backgroundImage: 'url("src/images/Trips_img.png")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       textAlign: 'center',
